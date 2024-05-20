@@ -1,3 +1,19 @@
 # Learn Terraform - Test
+* [Link](https://developer.hashicorp.com/terraform/tutorials/configuration-language/test)
 
-This is the companion repo to the [Write Terraform Tests](https://developer.hashicorp.com/terraform/language/tests) tutorial.
+## Goal
+* Syntax for tests
+* validate configuration -- via -- helper modules
+* create mocks / -- avoid creating -- unnecessary resources
+
+## Steps
+* create S3 bucket
+* upload files (/ host static website) there
+* helper module -- to 
+  * generate -- random bucket name
+  * create -- `http` data source
+  * publish to -- HCP Terraform private module registry
+
+## Prerequisites
+* 
+* TODO:
