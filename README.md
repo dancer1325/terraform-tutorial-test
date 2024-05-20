@@ -15,5 +15,5 @@
   * publish to -- HCP Terraform private module registry
 
 ## Prerequisites
-* 
+* Terraform [v1.7+](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed locally
 * TODO:
