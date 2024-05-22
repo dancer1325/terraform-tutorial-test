@@ -30,3 +30,4 @@ override.tf.json
 
 # Ignore terraform executable
 terraform
+/.idea/
