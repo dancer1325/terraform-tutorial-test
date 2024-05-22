@@ -1,5 +1,8 @@
 provider "aws" {
+  profile = "default"
   region = "us-east-2"
+  #region = "us-west-2"
+  shared_credentials_files = ["$HOME/.aws/credentials"]
 }
 
 resource "aws_s3_bucket" "s3_bucket" {

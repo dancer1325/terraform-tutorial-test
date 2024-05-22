@@ -1,5 +1,6 @@
 # Call the setup module to create a random bucket prefix
 run "setup_tests" {
+  #command  NOT specified -> apply by default
   module {
     source = "./tests/setup"
   }
@@ -7,7 +8,9 @@ run "setup_tests" {
 
 # Apply run block to create the bucket
 run "create_bucket" {
+  #command  NOT specified -> apply by default
   variables {
+    # -- refer to -- another run block
     bucket_name = "${run.setup_tests.bucket_prefix}-aws-s3-website-test"
   }
 

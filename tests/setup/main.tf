@@ -1,3 +1,4 @@
+# Helper module for testing
 terraform {
   required_providers {
     random = {
