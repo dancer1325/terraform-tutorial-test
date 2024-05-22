@@ -51,3 +51,5 @@
       * Attempt1: `terraform force-unlock`
       * Attempt2: `terraform refresh`
       * Solution: Eliminate manually in the AWS console
+    * Problem3: " timeout error: GET"
+      * Solution: Upgrade 'http.version' & `terraform init -upgrade` 
