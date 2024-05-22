@@ -25,7 +25,6 @@
       * 'AWS_REGION'
     * credential files
       * `aws config` & pass the 'AWS_ACCESS_KEY_ID' & 'AWS_SECRET_ACCESS_KEY'
-* TODO:
 
 ## Structure
 * 'www/'
@@ -53,3 +52,9 @@
       * Solution: Eliminate manually in the AWS console
     * Problem3: " timeout error: GET"
       * Solution: Upgrade 'http.version' & `terraform init -upgrade` 
+
+
+## Publish to organization's HCP Terraform registry
+* TODO:
+
+## TODO:
