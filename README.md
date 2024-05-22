@@ -57,4 +57,5 @@
 ## Publish to organization's HCP Terraform registry
 * TODO:
 
-## TODO:
+## Mock tests
+* Check 'main.tf' & 'website.tftest.hcl', to the specific sections
