@@ -9,6 +9,8 @@ run "setup_tests" {
 # Apply run block to create the bucket
 run "create_bucket" {
   #command  NOT specified -> apply by default
+  # module NOT specified -> apply the working directory module!!
+
   variables {
     # -- refer to -- another run block
     bucket_name = "${run.setup_tests.bucket_prefix}-aws-s3-website-test"
@@ -37,11 +39,13 @@ run "create_bucket" {
 run "website_is_running" {
   command = plan
 
+  # NOT working directory module is executed
   module {
     source = "./tests/final"
   }
 
   variables {
+    # refer to previous run
     endpoint = run.create_bucket.website_endpoint
   }
 

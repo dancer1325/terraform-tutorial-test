@@ -34,7 +34,7 @@
 * '/tests'
   * default folder in which `terraform test` looks for the test files
   * '/setup/main.tf'
-    * helper module 
+    * helper module to set up the skeleton -- that's why it's executed in the first `run` --
 * Check 'configurationLanguage/Tests' to understand the syntax
 
 ## How to execute tests?
@@ -51,8 +51,7 @@
       * Attempt2: `terraform refresh`
       * Solution: Eliminate manually in the AWS console
     * Problem3: " timeout error: GET"
-      * Solution: Upgrade 'http.version' & `terraform init -upgrade` 
-
+      * Solution: Upgrade 'http.version' & `terraform init -upgrade`
 
 ## Publish to organization's HCP Terraform registry
 * TODO:
