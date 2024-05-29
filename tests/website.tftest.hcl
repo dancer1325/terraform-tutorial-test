@@ -1,6 +1,7 @@
 # Call the setup module to create a random bucket prefix
 run "setup_tests" {
   #command  NOT specified -> apply by default
+  # module specified -> run that module
   module {
     source = "./tests/setup"
   }
@@ -55,17 +56,21 @@ run "website_is_running" {
   }
 }
 
+
 # For mocking tests
 override_resource {
   target = aws_instance.backend_api
+  # values NOT specified -> Terraform generates automatically, but with the criterias specified
 }
 
 override_resource {
   target = aws_db_instance.backend_api
+  # values NOT specified -> Terraform generates automatically, but with the criterias specified
 }
 
 run "check_backend_api" {
-  # Run assertions with hardcoded values of the resources
+  #command  NOT specified -> apply by default
+  # module NOT specified -> apply the working directory module!!
   assert {
     condition     = aws_instance.backend_api.tags.Name == "backend"
     error_message = "Invalid name tag"
