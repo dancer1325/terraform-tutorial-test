@@ -56,8 +56,7 @@ run "website_is_running" {
   }
 }
 
-
-# For mocking tests
+# For mocking tests / provider AWS is the real one and overriding certain resources
 override_resource {
   target = aws_instance.backend_api
   # values NOT specified -> Terraform generates automatically, but with the criterias specified
